@@ -71,7 +71,7 @@ project.godot        # Project settings (input map)
 
 ## Credits
 
-Created by [Your Name/Alias]
+Created by Rasya Devansyah
 Pistol Model by [j_albert05](https://www.instagram.com/j_albert05)
 
 ---
