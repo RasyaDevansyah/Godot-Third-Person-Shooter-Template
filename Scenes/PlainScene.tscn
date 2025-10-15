@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://c261m1cfe5gb7"]
+
+[ext_resource type="Shader" uid="uid://fdbjyck2tpqf" path="res://Shader/floor.tres" id="1_6638y"]
+[ext_resource type="PackedScene" uid="uid://b4slyc6wi7bqx" path="res://Scenes/Player/Player.tscn" id="2_1qlxw"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_iue02"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_6dosw"]
+sky_material = SubResource("ProceduralSkyMaterial_iue02")
+
+[sub_resource type="Environment" id="Environment_sjlan"]
+background_mode = 2
+sky = SubResource("Sky_6dosw")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ci6rb"]
+render_priority = 0
+shader = ExtResource("1_6638y")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_plirc"]
+
+[node name="PlainScene" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+light_energy = 0.285
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sjlan")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00506699, 0)
+material_override = SubResource("ShaderMaterial_ci6rb")
+use_collision = true
+collision_layer = 2
+collision_mask = 3
+size = Vector3(62.2373, 0.019043, 69.9783)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.46945, 1.31901, 2.66833)
+material_override = SubResource("StandardMaterial3D_plirc")
+use_collision = true
+collision_layer = 2
+collision_mask = 3
+size = Vector3(1.36731, 2.75195, 10.0081)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.01413, 1.28362, -11.3366)
+material_override = SubResource("StandardMaterial3D_plirc")
+use_collision = true
+collision_layer = 2
+collision_mask = 3
+size = Vector3(3.5032, 2.75195, 3.29498)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.62042, 0.603018, -10.8835)
+material_override = SubResource("StandardMaterial3D_plirc")
+use_collision = true
+collision_layer = 2
+collision_mask = 3
+size = Vector3(3.14613, 1.39075, 2.3887)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3884, 0.37197, -6.84284)
+material_override = SubResource("StandardMaterial3D_plirc")
+use_collision = true
+collision_layer = 2
+collision_mask = 3
+size = Vector3(3.14613, 0.92865, 2.3887)
+
+[node name="Player" parent="." instance=ExtResource("2_1qlxw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.421382, 0.00445426, 0.905898)
