@@ -73,7 +73,7 @@ project.godot        # Project settings (input map)
 
 Created by Rasya Devansyah
 
-Pistol Model by [j_albert05](https://www.instagram.com/j_albert05)
+Assault Rifle Model by [j_albert05](https://www.instagram.com/j_albert05)
 
 ---
 
