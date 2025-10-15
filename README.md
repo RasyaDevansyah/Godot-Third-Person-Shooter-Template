@@ -1,5 +1,7 @@
 # Godot Third Person Shooter Player Template (Experimental)
 
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/9db8e205-9d87-4ff0-b9f0-d499b927946e" />
+
 This repository provides a ready-to-use, experimental player controller implementation for Godot 4.x. The entire controller and supporting resources are self-contained in the `Scenes/Player` folder and can be copied directly into your own Godot projects.
 
 ## Features
@@ -16,7 +18,8 @@ This repository provides a ready-to-use, experimental player controller implemen
     *   The `Scenes/Player` folder contains everything you need for the player (scene, scripts, textures).
     *   Copy the entire `Player` folder into your own Godot project's `Scenes` folder (keep the folder structure).
 
-    ![Image Placeholder for Folder Copy](https://via.placeholder.com/390x140?text=Copy+Player+Folder)
+    <img width="632" height="546" alt="image" src="https://github.com/user-attachments/assets/1aef4b39-aba3-487b-a130-3eaf724622f6" />
+
 
 2.  **Add the Player Scene to Your World**
     *   In your main scene, instance `Player.tscn` from `Scenes/Player` and position it in the world.
@@ -32,7 +35,8 @@ This repository provides a ready-to-use, experimental player controller implemen
         *   `Aim` (default: Right Mouse Button)
     * 
 
-    ![Image Placeholder for Input Map](https://via.placeholder.com/886x469?text=Input+Map+Setup)
+    <img width="1919" height="703" alt="image" src="https://github.com/user-attachments/assets/8997453a-c09c-4c38-bd8d-f47c4b6f7512" />
+
 
 4.  **Test the Player**
     *   Open the project in Godot 4.x, instance the player scene into your world, press Play. Use WASD to move, Shift to sprint, Spacebar to jump, and Right Mouse Button to aim.
